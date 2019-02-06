@@ -1,0 +1,78 @@
+\documentclass[marklength=0mm,
+    coverwidth=148.5mm,
+    coverheight=210mm,
+    bleedwidth=0mm,
+    spinewidth=10mm]{bookcover}
+
+\usepackage{blindtext}
+\usepackage{duck}
+
+\begin{document}
+
+%back cover
+\setbookcover{bgcolor}{back}{%
+color=yellow!20,
+}
+
+\setbookcover{fgsecond}{back}{%
+\vspace{2.5cm}
+\centering
+\scalebox{3.5}{\drawflower}
+\vfill
+}
+
+\setbookcover{fgfirst}{back}{%
+\centering
+\begin{minipage}[c]{.7\textwidth}
+{
+\vspace*{4cm}
+\Large Back}
+\vspace*{4cm}
+
+\blindtext
+\end{minipage}
+}
+
+%front cover
+\setbookcover{bgcolor}{front}{%
+color=yellow!20,
+}
+
+\setbookcover{fgsecond}{front}{%
+\vspace{3cm}
+\centering
+\scalebox{3.5}{\drawduck}
+\vfill
+}
+
+\setbookcover{fgfirst}{front}{%
+\centering
+\begin{minipage}[c]{.7\textwidth}
+{
+\vspace*{4cm}
+\Large Front}
+\vspace*{4cm}
+
+\blindtext
+\end{minipage}
+}
+
+%spine
+\setbookcover{bgcolor}{spine}{%
+color=yellow!50,
+}
+
+\setbookcover{fgfirst}{spine}{
+\vfill
+\centering
+\rotatebox[origin=c]{90}{Lorem ipsum\hspace{5cm}
+\begin{tabular}{c}
+Etiam lobortis facilisis sem.\\
+Nullam nec mi et neque pharetra sollicitudin.
+\end{tabular}}
+\vfill}
+
+\makebookcover
+\end{document}
+
+enter image description here
